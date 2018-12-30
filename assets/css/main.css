@@ -3926,3 +3926,27 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+							/* Custom CSS Goes Below */
+		
+	.content .fa-file {
+		font-size: .9rem;
+	}
+
+	.tiles article .project-details {
+		position: relative;
+		top: 10px;
+		letter-spacing: 5px;
+		opacity: 0;
+		transition: 0.5s ease;
+	}
+
+	.tiles article:hover .project-details {
+		opacity: 1;
+	}
+
+	.tiles article .project-details .fa-paper-plane {
+		font-size: .9rem;
+	}
+
+	
