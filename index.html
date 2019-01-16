@@ -4,7 +4,11 @@
 		<title>Andrew Mirshafiee Web Developer Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/flexslider.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -14,7 +18,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Andrew</strong> <span>Mirshafiee</span></a>
+						<a href="index.html" class="logo"><div class="AM-logo"></div> <strong>Andrew</strong> <span>Mirshafiee</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -25,6 +29,7 @@
 						<ul class="links">
 							<li><a href="#home" onclick="scrollToHome()">Home</a></li>
 							<li><a href="#projects" onclick="scrollToProjects()">Projects</a></li>
+							<li><a href="#skills" onclick="scrollToSkills()">Skills</a></li>
 							<li><a href="#about" onclick="scrollToAbout()">About</a></li>
 							<li><a href="#contact" onclick="scrollToContact()">Contact</a></li>
 						</ul>
@@ -61,7 +66,9 @@
 									<header class="major">
 										<h3><a href="landing.html" class="link">SGT Manager</a></h3>
 										<p>Student Grade Table</p>
-										<span class="project-details"><i class="icon fa-paper-plane"></i> <i class="icon fa-github"></i></span>
+											<span class="project-details">
+												<span id="sgt-livedemo"><p id="project-detail-livedemo">Live Demo</p> <i class="icon fa-paper-plane" id="sgt-demo"></span></i> <p id="project-detail-github">GitHub</p> <i class="icon fa-github"></i>
+											</span>
 									</header>
 								</article>
 								<article>
@@ -71,7 +78,11 @@
 									<header class="major">
 										<h3><a href="landing.html" class="link">Reversi</a></h3>
 										<p>Hackathon Project</p>
-										<span class="project-details"><i class="icon fa-paper-plane"></i> <i class="icon fa-github"></i></span>
+										<div class="project-details-container">
+											<span class="project-details">
+												<p id="project-detail-livedemo">Live Demo</p> <i class="icon fa-paper-plane" id="reversi-demo"></i> <p id="project-detail-github">GitHub</p> <i class="icon fa-github"></i>
+											</span>
+										</div>
 									</header>
 								</article>
 								<article>
@@ -81,7 +92,9 @@
 									<header class="major">
 										<h3><a href="landing.html" class="link">Crease</a></h3>
 										<p>Bookmark Manager // Chrome Extension</p>
-										<span class="project-details"><i class="icon fa-paper-plane"></i> <i class="icon fa-github"></i></span>
+											<span class="project-details">
+												<p id="project-detail-livedemo">Live Demo</p> <i class="icon fa-paper-plane" id="crease-demo"></i> <p id="project-detail-github">GitHub</p> <i class="icon fa-github"></i>
+											</span>
 									</header>
 								</article>
 								<article>
@@ -93,7 +106,7 @@
 										<p>Full-Stack E-Commerce Website</p>
 									</header>
 								</article>
-								<article>
+								<!-- <article>
 									<span class="image">
 										<img src="images/pic05.jpg" alt="" />
 									</span>
@@ -101,17 +114,115 @@
 										<h3><a href="landing.html" class="link">Consequat</a></h3>
 										<p>Ipsum dolor sit amet</p>
 									</header>
-								</article>
-								<article>
+								</article> -->
+								<!-- <article id="skills-and-tech">
 									<span class="image">
 										<img src="images/pic06.jpg" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="landing.html" class="link">Etiam</a></h3>
-										<p>Feugiat amet tempus</p>
+										<h3><a href="landing.html" class="link" id="skills-tech-header">Skills & Technology</a></h3>
 									</header>
-								</article>
+								</article> -->
 							</section>
+
+						<!-- Skills and Tech -->
+						<section id="skills" class="add-padding">
+        
+							<div class="container">
+								
+								<h1 class="skills-title big-text scrollimation fade-up">Technical Skills</h1>
+								
+								<div class="row skills">
+								
+									
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up in">
+											<div class="icon">
+												<img src="images/skills-icons/javascript-original.svg">
+											</div>
+											JavaScript
+										</div>
+										
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d1 in">
+											<div class="icon">
+												<img src="images/skills-icons/react-original.svg">
+											</div>
+											React.js
+										</div>
+										
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d2 in">
+											<div class="icon">
+												<img src="images/skills-icons/redux.svg">
+											</div>
+											Redux
+										</div>
+
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d3">
+											<div class="icon">
+												<img src="images/skills-icons/ajax.svg">
+											</div>
+											AJAX
+										</div>
+							
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up in">
+										
+											<div class="icon">
+													<img src="images/skills-icons/html5-original.svg">
+											</div>
+											HTML5
+										</div>
+					
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d1 in">
+											<div class="icon">
+												<img src="images/skills-icons/css3-original.svg">
+											</div>
+											CSS3
+										</div>
+										
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d2 in">
+											<div class="icon">
+												<img src="images/skills-icons/git-original.svg">
+											</div>
+											Git
+										</div>
+					
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d3 in">
+											<div class="icon">
+												<img src="images/skills-icons//github-original.svg">
+											</div>
+											Github
+										</div>
+
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up">
+											<div class="icon">
+												<img src="images/skills-icons/es6.svg">
+											</div>
+											EMCAScript6
+										</div>
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d3 in">
+											<div class="icon">
+												<img src="images/skills-icons/bootstrap-plain.svg">
+											</div>
+											Bootstrap
+										</div>
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d1">
+											<div class="icon">
+												<img src="images/skills-icons/php-plain.svg">
+											</div>
+											PHP
+										</div>
+										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d2">
+											<div class="icon">
+												<img src="images/skills-icons/nodejs-original.svg">
+											</div>
+											Node.js
+										</div>
+									
+									
+								</div>
+								
+							</div>
+						
+						</section>
 
 						<!-- Two -->
 							<section id="two">
@@ -210,6 +321,10 @@
 				}
 				function scrollToProjects(){
 					var elmnt = document.getElementById("main");
+					elmnt.scrollIntoView(true);
+				}
+				function scrollToSkills(){
+					var elmnt = document.getElementById("skills");
 					elmnt.scrollIntoView(true);
 				}
 				function scrollToAbout(){
