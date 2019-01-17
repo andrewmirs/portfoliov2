@@ -9,6 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
+		<!-- Scroll Magic -->
+		<script src="assets/js/ScrollMagic.min.js"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -86,7 +89,7 @@
 										</div>
 									</header>
 								</article>
-
+							
 								<article>
 									<span class="image">
 										<img src="images/pic03.jpg" alt="" />
@@ -113,44 +116,50 @@
 							</section>
 
 						<!-- Skills and Tech -->
+						
+						<script>
+							// init controller
+							var controller = new ScrollMagic.Controller();
+						</script>
+
 						<section id="skills" class="add-padding">
         
 							<div class="container">
 								
-								<h1 class="skills-title big-text scrollimation fade-up">Technical Skills</h1>
+								<h1 id="tech-title" class="skills-title scroll-fade-up">Technical Skills</h1>
 								
 								<div class="row skills">
 								
 									
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up in">
+										<div id="tech-row1" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up">
 											<div class="icon">
 												<img src="images/skills-icons/javascript-original.svg">
 											</div>
 											JavaScript
 										</div>
 										
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d1 in">
+										<div id="tech-row1" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d1">
 											<div class="icon">
 												<img src="images/skills-icons/react-original.svg">
 											</div>
 											React.js
 										</div>
 										
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d2 in">
+										<div id="tech-row1" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d2">
 											<div class="icon">
 												<img src="images/skills-icons/redux.svg">
 											</div>
 											Redux
 										</div>
 
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d3">
+										<div id="tech-row1" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d3">
 											<div class="icon">
 												<img src="images/skills-icons/ajax.svg">
 											</div>
 											AJAX
 										</div>
 							
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up in">
+										<div id="tech-row2" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up">
 										
 											<div class="icon">
 													<img src="images/skills-icons/html5-original.svg">
@@ -158,46 +167,46 @@
 											HTML5
 										</div>
 					
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d1 in">
+										<div id="tech-row2" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d1">
 											<div class="icon">
 												<img src="images/skills-icons/css3-original.svg">
 											</div>
 											CSS3
 										</div>
 										
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d2 in">
+										<div id="tech-row2" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d2">
 											<div class="icon">
 												<img src="images/skills-icons/git-original.svg">
 											</div>
 											Git
 										</div>
 					
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d3 in">
+										<div id="tech-row2" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d3">
 											<div class="icon">
 												<img src="images/skills-icons//github-original.svg">
 											</div>
 											Github
 										</div>
 
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up">
+										<div id="tech-row3" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up">
 											<div class="icon">
 												<img src="images/skills-icons/es6.svg">
 											</div>
 											EMCAScript6
 										</div>
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d3 in">
+										<div id="tech-row3" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d1">
 											<div class="icon">
 												<img src="images/skills-icons/bootstrap-plain.svg">
 											</div>
 											Bootstrap
 										</div>
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d1">
+										<div id="tech-row3" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d2">
 											<div class="icon">
 												<img src="images/skills-icons/php-plain.svg">
 											</div>
 											PHP
 										</div>
-										<div class="col-xs-3 col-md-3 col-sm-3 item scrollimation fade-up d2">
+										<div id="tech-row3" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d3">
 											<div class="icon">
 												<img src="images/skills-icons/nodejs-original.svg">
 											</div>
@@ -209,6 +218,32 @@
 								
 							</div>
 						
+						<script>
+							// Technical Skills Title 
+							var sceneTechTitle = new ScrollMagic.Scene({triggerElement: "#skills"})
+								// Trigger animation by adding a css class
+								.setClassToggle("#tech-title", "in")
+								.addTo(controller);
+							
+							// Technical Skills Row 1
+							var sceneTechRow1 = new ScrollMagic.Scene({triggerElement: "#skills"})
+								// Trigger animation by adding a css class
+								.setClassToggle("#tech-row1", "in")
+								.addTo(controller);
+							
+							// Technical Skills Row 2
+							var sceneTechRow2 = new ScrollMagic.Scene({triggerElement: "#tech-title"})
+								// Trigger animation by adding a css class
+								.setClassToggle("#tech-row2", "in")
+								.addTo(controller);
+
+							// Technical Skills Row 3
+							var sceneTechRow3 = new ScrollMagic.Scene({triggerElement: "#tech-row1"})
+								// Trigger animation by adding a css class
+								.setClassToggle("#tech-row3", "in")
+								.addTo(controller);
+						</script>
+
 						</section>
 
 						<!-- Two -->
@@ -230,6 +265,7 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
+								<h1><span class="lets">LET'S</span> <span class="talk">TALK!</span></h1>
 								<form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
@@ -293,7 +329,6 @@
 			</div>
 
 		<!-- Scripts -->
-			
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -301,6 +336,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<!-- Nav Scroll to Element -->
 			<script>
 				function scrollToHome(){
 					var elmnt = document.getElementById("wrapper");
