@@ -84,7 +84,10 @@ article:hover #sgt-livedemo:hover {
 }
 
 #skills {
-    background-color:  rgb(59, 59, 59);
+	background-image: url('../../images/techskills-background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .skills {
@@ -121,10 +124,6 @@ article:hover #sgt-livedemo:hover {
     font-size:24px;
     -webkit-transition:all .3s ease-out;
     transition:all .3s ease-out;
-}
-
-.skills .item:hover h2{
-    color:#38A5DB;
 }
 
 .skills .item:hover .icon{
