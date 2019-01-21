@@ -4,7 +4,14 @@
 		<title>Andrew Mirshafiee Web Developer Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/flexslider.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
+		<!-- Scroll Magic -->
+		<script src="assets/js/ScrollMagic.min.js"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -14,7 +21,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Andrew</strong> <span>Mirshafiee</span></a>
+						<a href="index.html" class="logo"><div class="AM-logo"></div> <strong>Andrew</strong> <span>Mirshafiee</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -25,6 +32,7 @@
 						<ul class="links">
 							<li><a href="#home" onclick="scrollToHome()">Home</a></li>
 							<li><a href="#projects" onclick="scrollToProjects()">Projects</a></li>
+							<li><a href="#skills" onclick="scrollToSkills()">Skills</a></li>
 							<li><a href="#about" onclick="scrollToAbout()">About</a></li>
 							<li><a href="#contact" onclick="scrollToContact()">Contact</a></li>
 						</ul>
@@ -34,16 +42,16 @@
 					<section id="banner" class="major">
 						<div class="inner">
 							<header class="major">
-								<h1>Hi, my name is Andrew</h1>
+								<h1>Hi, my name is <span id="andrew">Andrew</span></h1>
 							</header>
 							<div class="content">
 									<!-- <a href="#" class="icon fa-github"><span class="label">GitHub</span></a>
 									<a href="#" class="icon fa-linkedin"><span class="label">Linked-In</span></a>
 									<a href="#" class="icon fas fa-file"><span class="label">Resume</span></a> -->
-								<p>A responsive site template designed by HTML5 UP<br />
-								and released under the Creative Commons.</p>
+								<p>Welcome to my portfolio. Hope you enjoy some of my <br />
+								work at least half as much as I enjoyed creating them.</p>
 								<ul class="actions">
-									<li><a href="#projects" class="button scrolly" onclick="scrollToProjects()">Projects <i class="icon fa-level-down"></i></a></li>
+									<li><a href="#projects" class="button scrolly projects-btn" onclick="scrollToProjects()">Projects <i class="icon fa-level-down"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -52,28 +60,36 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- One -->
+						<!-- Projects -->
 							<section id="one" class="tiles">
 								<article>
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="images/SGM.png" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="landing.html" class="link">SGT Manager</a></h3>
-										<p>Student Grade Table</p>
-										<span class="project-details"><i class="icon fa-paper-plane"></i> <i class="icon fa-github"></i></span>
+										<h3><a href="landing.html" class="link">Student Grade Manager</a></h3>
+										<p>Application</p>
+											<span class="project-details sgm">
+												<span id="sgt-livedemo"><p id="project-detail-livedemo">Live Demo</p> <i class="icon fa-paper-plane" id="sgt-demo"></span></i> <p id="project-detail-github">GitHub</p> <i class="icon fa-github"></i>
+											</span>
 									</header>
 								</article>
+
 								<article>
 									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
+										<img src="images/reversi.png" alt="" />
 									</span>
 									<header class="major">
 										<h3><a href="landing.html" class="link">Reversi</a></h3>
 										<p>Hackathon Project</p>
-										<span class="project-details"><i class="icon fa-paper-plane"></i> <i class="icon fa-github"></i></span>
+										<div class="project-details-container">
+											<span class="project-details reversi">
+												<p id="project-detail-livedemo">Live Demo</p> <i class="icon fa-paper-plane" id="reversi-demo"></i> <p id="project-detail-github">GitHub</p> <i class="icon fa-github"></i>
+											</span>
+										</div>
 									</header>
 								</article>
+							
 								<article>
 									<span class="image">
 										<img src="images/pic03.jpg" alt="" />
@@ -81,57 +97,192 @@
 									<header class="major">
 										<h3><a href="landing.html" class="link">Crease</a></h3>
 										<p>Bookmark Manager // Chrome Extension</p>
-										<span class="project-details"><i class="icon fa-paper-plane"></i> <i class="icon fa-github"></i></span>
+											<span class="project-details">
+												<p id="project-detail-livedemo">Live Demo</p> <i class="icon fa-paper-plane" id="crease-demo"></i> <p id="project-detail-github">GitHub</p> <i class="icon fa-github"></i>
+											</span>
 									</header>
 								</article>
+
 								<article>
 									<span class="image">
 										<img src="images/inprogress.png" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="landing.html" class="link">Sick Fits</a></h3>
+										<h3><a href="landing.html" id="skills-title-trigger" class="link">Sick Fits</a></h3>
 										<p>Full-Stack E-Commerce Website</p>
 									</header>
 								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Consequat</a></h3>
-										<p>Ipsum dolor sit amet</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Etiam</a></h3>
-										<p>Feugiat amet tempus</p>
-									</header>
-								</article>
+			
 							</section>
 
-						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-										<h2>About Me</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="landing.html" class="button next"><i class="icon fas fa-file"></i> Resume</a></li>
-									</ul>
+				<!-- Skills and Tech -->
+					
+					<script>
+						// init controller
+						var skillsController = new ScrollMagic.Controller();
+					</script>
+
+					<section id="skills" class="add-padding">
+	
+						<div class="container">
+							
+							<h1 id="tech-title" class="skills-title scroll-fade-up">Technical Skills</h1>
+							
+							<div class="row skills">
+								
+								<div id="tech-row1" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up">
+									<div class="icon">
+										<img src="images/skills-icons/javascript-original.svg">
+									</div>
+									JavaScript
 								</div>
-							</section>
+								
+								<div id="tech-row1" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d1">
+									<div class="icon">
+										<img src="images/skills-icons/react-original.svg">
+									</div>
+									React.js
+								</div>
+								
+								<div id="tech-row1" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d2">
+									<div class="icon">
+										<img src="images/skills-icons/redux.svg">
+									</div>
+									Redux
+								</div>
 
-					</div>
+								<div id="tech-row1" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d3">
+									<div class="icon">
+										<img src="images/skills-icons/ajax.svg">
+									</div>
+									AJAX
+								</div>
+					
+								<div id="tech-row2" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up">
+								
+									<div class="icon">
+											<img src="images/skills-icons/html5-original.svg">
+									</div>
+									HTML5
+								</div>
+			
+								<div id="tech-row2" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d1">
+									<div class="icon">
+										<img src="images/skills-icons/css3-original.svg">
+									</div>
+									CSS3
+								</div>
+								
+								<div id="tech-row2" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d2">
+									<div class="icon">
+										<img src="images/skills-icons/git-original.svg">
+									</div>
+									Git
+								</div>
+			
+								<div id="tech-row2" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d3">
+									<div class="icon">
+										<img src="images/skills-icons//github-original.svg">
+									</div>
+									Github
+								</div>
+
+								<div id="tech-row3" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up">
+									<div class="icon">
+										<img src="images/skills-icons/es6.svg">
+									</div>
+									EMCAScript6
+								</div>
+								<div id="tech-row3" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d1">
+									<div class="icon">
+										<img src="images/skills-icons/bootstrap-plain.svg">
+									</div>
+									Bootstrap
+								</div>
+								<div id="tech-row3" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d2">
+									<div class="icon">
+										<img src="images/skills-icons/php-plain.svg">
+									</div>
+									PHP
+								</div>
+								<div id="tech-row3" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d3">
+									<div class="icon">
+										<img src="images/skills-icons/nodejs-original.svg">
+									</div>
+									Node.js
+								</div>
+							
+							
+							</div>
+							
+						</div>
+					
+					<div id="techicon-background"></div>
+
+					<script>
+						// Technical Skills Title 
+						var sceneTechTitle = new ScrollMagic.Scene({triggerElement: "#skills-title-trigger"})
+							// Trigger animation by adding a css class
+							.setClassToggle("#tech-title", "in")
+							.addTo(skillsController);
+						
+						// Technical Skills Row 1
+						var sceneTechRow1 = new ScrollMagic.Scene({triggerElement: "#skills"})
+							// Trigger animation by adding a css class
+							.setClassToggle("#tech-row1", "in")
+							.addTo(skillsController);
+						
+						// Technical Skills Row 2
+						var sceneTechRow2 = new ScrollMagic.Scene({triggerElement: "#tech-title"})
+							// Trigger animation by adding a css class
+							.setClassToggle("#tech-row2", "in")
+							.addTo(skillsController);
+
+						// Technical Skills Row 3
+						var sceneTechRow3 = new ScrollMagic.Scene({triggerElement: "#tech-row1"})
+							// Trigger animation by adding a css class
+							.setClassToggle("#tech-row3", "in")
+							.addTo(skillsController);
+					</script>
+
+					</section>
+
+				<!-- Two -->
+					<section id="two">
+						<div class="inner">
+							<header class="major">
+								<h2>About Me</h2>
+							</header>
+							<p>Ever since the beginning of high school, I have been curious about the art and design
+							of the world around me. What makes something work, how is it functioning at its core, or 
+							why are we motivated to make the choices we do. This initially led me to chase a Business 
+							Marketing degree at Cal State Fullerton, focusing on product design and market strategies.</p>
+
+							<p id="contact-title-trigger">About a semester away from graduating, I was introduced to programming and couldn’t shake 
+							the feeling that I had to figure out a way to incorporate this into my life. A few months 
+							after completing my degree, I found Learning Fuze, an accelerated web development program 
+							where I’ve since spent thousands of hours on and off-campus learning, practicing and creating 
+							all kinds of different applications. I usually keep my hands full, but I am always looking forward
+							to new projects. I would love to discuss any topic related to programming, technology, or design,
+							so feel free to reach out!</p>
+								
+							<ul class="actions">
+								<li><a href="landing.html" class="button next resume-button"><i class="icon fas fa-file"></i> Resume</a></li>
+							</ul>
+						</div>
+					</section>
 
 				<!-- Contact -->
+
+					<script>
+						// init controller
+						var contactController = new ScrollMagic.Controller();
+					</script>
+
 					<section id="contact">
 						<div class="inner">
 							<section>
+								<h1 id="letstalk" class="scroll-fade-right"><span class="lets">LET'S</span> <span class="talk">TALK!</span></h1>
 								<form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
@@ -148,8 +299,8 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
+										<li class="contact-btns"><input type="submit" value="Send Message" class="primary" /></li>
+										<li class="contact-btns"><input type="reset" value="Clear" /></li>
 									</ul>
 								</form>
 							</section>
@@ -179,15 +330,23 @@
 								</section>
 							</section>
 						</div>
-					</section>
 
+					<script>
+						// Contact Title 
+						var contactTitle = new ScrollMagic.Scene({triggerElement: "#contact-title-trigger"})
+							// Trigger animation by adding a css class
+							.setClassToggle("#letstalk", "in")
+							.addTo(skillsController);
+					</script>
+				<script src="assets/js/particles.js"></script>
+					</section>
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon alt fas fa-file"><span class="label">Instagram</span></a></li>
+								<li> <a href="https://github.com/andrewmirs" target="_blank" class="icon alt fa-github"></a> <br> <span class="label">GitHub</span></li>
+								<li> <a href="https://www.linkedin.com/in/andrewmirshafiee/" target="_blank" class="icon alt fa-linkedin"></a> <br> <span class="label">LinkedIn</span></li>
+								<li> <a href="#" class="icon alt fas fa-file"></a> <br> <span class="label">Resume</span></li>
 							</ul>
 						</div>
 					</footer>
@@ -195,14 +354,16 @@
 			</div>
 
 		<!-- Scripts -->
-			
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
+			
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
+			<!-- Nav Scroll to Element -->
 			<script>
 				function scrollToHome(){
 					var elmnt = document.getElementById("wrapper");
@@ -210,6 +371,10 @@
 				}
 				function scrollToProjects(){
 					var elmnt = document.getElementById("main");
+					elmnt.scrollIntoView(true);
+				}
+				function scrollToSkills(){
+					var elmnt = document.getElementById("skills");
 					elmnt.scrollIntoView(true);
 				}
 				function scrollToAbout(){
