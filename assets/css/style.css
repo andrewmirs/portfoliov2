@@ -25,6 +25,15 @@ a.projects-btn:hover {
 	text-decoration: none;
 }
 
+#andrew {
+	background-image: url(../../images/ripple.gif);
+	background-size: 184% 128%;
+	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	background-position-x: 52%;
+}
+
 /* Projects Section */
 
 .content .fa-file {
@@ -144,6 +153,36 @@ article:hover #sgt-livedemo:hover {
 }
 
 /* Contact Section */
+
+#contact {
+	/* background-image: linear-gradient(35deg, #00009a, #b300b3); 
+	background: #41208b; */
+	position: relative;
+}
+
+#contact canvas {
+    position: absolute;
+    top: 0;
+	left: 0;
+}
+
+form > .fields > .field {
+	transition: all 225ms ease;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    line-height: 29px;
+    resize: none;
+    z-index: 9999;
+}
+
+.contact-method {
+	z-index: 9999;
+}
+
+.contact-btns {
+	z-index: 9999;
+}
 
 .lets {
 	font-family: 'Roboto Condensed', sans-serif;
