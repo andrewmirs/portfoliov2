@@ -66,7 +66,7 @@
 									<span class="image">
 										<img src="images/SGM.png" alt="" />
 									</span>
-									<header class="major">
+									<header class="major project-header">
 										<h3><a href="landing.html" class="link">Student Grade Manager</a></h3>
 										<p>Application</p>
 											<span class="project-details sgm">
@@ -79,7 +79,7 @@
 									<span class="image">
 										<img src="images/reversi.png" alt="" />
 									</span>
-									<header class="major">
+									<header class="major project-header">
 										<h3><a href="landing.html" class="link">Reversi</a></h3>
 										<p>Hackathon Project</p>
 										<div class="project-details-container">
@@ -94,7 +94,7 @@
 									<span class="image">
 										<img src="images/pic03.jpg" alt="" />
 									</span>
-									<header class="major">
+									<header class="major project-header">
 										<h3><a href="landing.html" class="link">Crease</a></h3>
 										<p>Bookmark Manager // Chrome Extension</p>
 											<span class="project-details">
@@ -107,7 +107,7 @@
 									<span class="image">
 										<img src="images/inprogress.png" alt="" />
 									</span>
-									<header class="major">
+									<header class="major project-header">
 										<h3><a href="landing.html" id="skills-title-trigger" class="link">Sick Fits</a></h3>
 										<p>Full-Stack E-Commerce Website</p>
 									</header>
@@ -288,19 +288,22 @@
 										<div class="field half">
 											<label for="name">Name</label>
 											<input type="text" name="name" id="name" />
+											<p class="error error-name"></p>
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
 											<input type="text" name="email" id="email" />
+											<p class="error error-email"></p>
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
 											<textarea name="message" id="message" rows="6"></textarea>
+											<p class="error error-message"></p>
 										</div>
 									</div>
 									<ul class="actions">
-										<li class="contact-btns"><input type="submit" value="Send Message" class="primary" /></li>
-										<li class="contact-btns"><input type="reset" value="Clear" /></li>
+										<li class="contact-btns"><input id="send-message" type="button" value="Send Message" class="primary" /></li>
+										<li class="contact-btns"><input id="clear-form" type="reset" value="Clear" /></li>
 									</ul>
 								</form>
 							</section>
@@ -338,7 +341,7 @@
 							.setClassToggle("#letstalk", "in")
 							.addTo(skillsController);
 					</script>
-				<script src="assets/js/particles.js"></script>
+					
 					</section>
 				<!-- Footer -->
 					<footer id="footer">
@@ -359,10 +362,11 @@
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
-			
+			<script src="assets/js/particles.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/custom.js"></script>
+			<script src="assets/js/contactform.js"></script>
 			<!-- Nav Scroll to Element -->
 			<script>
 				function scrollToHome(){

@@ -83,10 +83,10 @@ a.projects-btn:hover {
     text-transform: uppercase;
 }
 
-article:hover #sgt-livedemo:hover {
-    background-color: #8d82c4;
+article:hover .project-header {
+	transition: 0.5s ease-in-out;
+	text-shadow: 0px 2px 9px #313131, 0px 2px 18px #000000;
 }
-
 
 /* Skills and Tech Section */
 
@@ -194,10 +194,18 @@ form > .fields > .field {
 	font-weight: 400;
 }
 
+.error {
+    margin: 3px 0 0 0;
+    font-size: 1rem;
+    color: #dd7a7a;
+}
+
+
 .bounce-6 {
 	animation-name: bounce-6;
 	animation-timing-function: ease;
 }
+
 @keyframes bounce-6 {
 	0%   { transform: scale(1,1)      translateY(0); }
 	10%  { transform: scale(1.1,.9)   translateY(0); }
