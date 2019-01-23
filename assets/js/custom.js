@@ -109,4 +109,4 @@ var partJson = {
       "retina_detect": true
 };
 var jsonUri = "data:text/plain;base64,"+window.btoa(JSON.stringify(partJson));
-particlesJS.load('contact', jsonUri, () => console.log("Particles Working!!"));
+particlesJS.load('contact', jsonUri);

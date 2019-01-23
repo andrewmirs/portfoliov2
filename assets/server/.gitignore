@@ -1,5 +1,1 @@
-
-
-sendgridcredentials.js
-node_modules
-package-lock.json
+email_config.php

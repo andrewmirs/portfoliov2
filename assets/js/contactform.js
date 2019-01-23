@@ -5,7 +5,7 @@ $(document).ready(function(){
 });
 
 function sendMessage(){
-    const email = $("#email").val();
+    let errors = 0;
 
     const testValues = [
         {
@@ -23,7 +23,7 @@ function sendMessage(){
         {
             field: '#message',
             err: '.error-message',
-            regex: /^[A-Za-z ]{2,}$/,
+            regex: /^[A-Za-z.,;:@!? ]{2,}$/,
             message: 'Needs to be at least 2 characters. Letters and punctuation characters only.'
         }
     ]
@@ -34,8 +34,35 @@ function sendMessage(){
             displayError(testValues[i].err, '');
         } else {
             displayError(testValues[i].err, testValues[i].message);
+            errors++;
         }
     }
+
+    if( errors > 0 ){
+        return
+    }
+
+    let name = $('#name').val();
+    let email = $('#email').val();
+    let message = $('#message').val();
+
+    $.ajax({
+        type: "POST",
+        url: "assets/server/mail_handler.php",
+        data: {
+            name, 
+            email,
+            message,
+        },
+        success: function(result){
+            alert('Message has been sent!')
+            clearForm();
+        },
+        error: function(error){
+            alert('Error attempting to send message.')
+        }
+    });
+
 }
 
 function displayError( input, message ){
@@ -46,4 +73,10 @@ function clearErrors(){
     $('.error-name').text('');
     $('.error-email').text('');
     $('.error-message').text('');
+}
+
+function clearForm(){
+    $('#name').val('');
+    $('#email').val('');
+    $('#message').val('');
 }
