@@ -2336,6 +2336,7 @@ input, select, textarea {
 
 			ul.icons li {
 				padding: 0 0.75em 0 0;
+				margin: 0 10px;
 			}
 
 		}
@@ -3294,6 +3295,8 @@ input, select, textarea {
 
 				#header .logo {
 					padding: 0 1em;
+					bottom: 5px;
+					position: relative;
 				}
 
 				#header nav a {
