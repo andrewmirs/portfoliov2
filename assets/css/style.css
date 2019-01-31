@@ -1,4 +1,4 @@
-/* Nav Bar */
+/*---- Nav Bar ----*/
 
 .logo:hover {
     text-decoration: none;
@@ -34,7 +34,7 @@ a.projects-btn:hover {
 	background-position-x: 52%;
 }
 
-/* Projects Section */
+/*---- Projects Section ----*/
 
 .content .fa-file {
     font-size: .9rem;
@@ -67,7 +67,7 @@ a:focus {
 	margin: 0 10px;
 }
 
-.icon.fa-github {
+.project-details .icon.fa-github {
 	font-size: 1.2rem;
 }
 
@@ -94,7 +94,7 @@ article:hover .project-header {
 	text-shadow: 0px 2px 9px #313131, 0px 2px 18px #000000;
 }
 
-/* Skills and Tech Section */
+/*---- Skills and Tech Section ----*/
 
 .icon > img {
 	width: 25%;
@@ -152,13 +152,13 @@ article:hover .project-header {
     transition:transform .4s ease-out;
 }
 
-/* About Me Section */
+/*---- About Me Section ----*/
 
 .resume-button:hover {
     text-decoration: none;
 }
 
-/* Contact Section */
+/*---- Contact Section ----*/
 
 #contact {
 	/* background-image: linear-gradient(35deg, #00009a, #b300b3); 
@@ -223,7 +223,7 @@ form > .fields > .field {
 }
 
 
-/* Footer Section */
+/*---- Footer Section ----*/
 
 #footer .inner {
 	text-align: center;
@@ -232,6 +232,23 @@ form > .fields > .field {
 ul.icons li {
 	margin: 0 20px;
 }
+
+
+/*-----------------------
+----- Media Queries ----- 
+-------------------------*/ 
+
+@media screen and (max-width: 736px) {
+
+	ul.icons li {
+		padding: 0 0.75em 0 0;
+		margin: 0 10px;
+	}
+
+}
+
+
+
 
 /*------------------------
 ---Scrolling animations---
