@@ -49,12 +49,9 @@ a.projects-btn:hover {
     transition: 1s ease;
 }
 
-.project-details {
-    /* padding: 10px 15px;
-    background-color: lightslategray;
-    border-radius: 10px; */
+a:focus {
+	color: whitesmoke;
 }
-
 
 .tiles article:hover .project-details {
     opacity: 1;
@@ -65,7 +62,16 @@ a.projects-btn:hover {
     font-size: .9rem;
 }
 
-#project-detail-livedemo {
+.project-details a {
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+.icon.fa-github {
+	font-size: 1.2rem;
+}
+
+.project-details {
     display: inline-block;
     font-size: 0.7em;
     font-weight: 600;
@@ -74,7 +80,7 @@ a.projects-btn:hover {
     text-transform: uppercase;
 }
 
-#project-detail-github {
+.project-detail-github {
     display: inline-block;
     font-size: 0.7em;
     font-weight: 600;
