@@ -55,7 +55,6 @@ function sendMessage(){
             message,
         },
         success: function(result){
-            alert('Message has been sent!')
             clearForm();
         },
         error: function(error){
