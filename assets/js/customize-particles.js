@@ -1,7 +1,7 @@
 var partJson = {
 	"particles": {
         "number": {
-          "value": 12,
+          "value": 10,
           "density": {
             "enable": true,
             "value_area": 473.4885849793636
@@ -54,7 +54,7 @@ var partJson = {
         },
         "move": {
           "enable": true,
-          "speed": 2,
+          "speed": 1.5,
           "direction": "none",
           "random": false,
           "straight": false,
@@ -71,7 +71,7 @@ var partJson = {
         "detect_on": "canvas",
         "events": {
           "onhover": {
-            "enable": false,
+            "enable": true,
             "mode": "grab"
           },
           "onclick": {
@@ -82,7 +82,7 @@ var partJson = {
         },
         "modes": {
           "grab": {
-            "distance": 400,
+            "distance": 24,
             "line_linked": {
               "opacity": 1
             }
