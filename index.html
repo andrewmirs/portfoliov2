@@ -266,29 +266,31 @@
 					</section>
 
 				<!-- Two -->
-					<section id="two">
-						<div class="inner">
-							<header class="major">
-								<h2>About Me</h2>
-							</header>
-							<p>Ever since the beginning of high school, I have been curious about the art and design
-							of the world around me. What makes something work, how is it functioning at its core, or 
-							why are we motivated to make the choices we do. This initially led me to chase a Business 
-							Marketing degree at Cal State Fullerton, focusing on product design and market strategies.</p>
 
-							<p id="contact-title-trigger">About a semester away from graduating, I was introduced to programming and couldn’t shake 
-							the feeling that I had to figure out a way to incorporate this into my life. A few months 
-							after completing my degree, I found LearningFuze, an accelerated web development program 
-							where I’ve since spent thousands of hours on and off-campus learning, practicing and creating 
-							all kinds of different applications. I usually keep my hands full, but I am always looking forward
-							to new projects. I would love to discuss any topic related to programming, technology, or design,
-							so feel free to reach out!</p>
-								
-							<ul class="actions">
-								<li><a href="landing.html" class="button next resume-button"><i class="icon fas fa-file"></i> Resume</a></li>
-							</ul>
-						</div>
-					</section>
+					<div class="aboutme-contact-section">
+						<section id="two">
+							<div class="inner">
+								<header class="major">
+									<h2>About Me</h2>
+								</header>
+								<p>Ever since the beginning of high school, I have been curious about the art and design
+								of the world around me. What makes something work, how is it functioning at its core, or 
+								why are we motivated to make the choices we do. This initially led me to chase a Business 
+								Marketing degree at Cal State Fullerton, focusing on product design and market strategies.</p>
+
+								<p id="contact-title-trigger">About a semester away from graduating, I was introduced to programming and couldn’t shake 
+								the feeling that I had to figure out a way to incorporate this into my life. A few months 
+								after completing my degree, I found LearningFuze, an accelerated web development program 
+								where I’ve since spent thousands of hours on and off-campus learning, practicing and creating 
+								all kinds of different applications. I usually keep my hands full, but I am always looking forward
+								to new projects. I would love to discuss any topic related to programming, technology, or design,
+								so feel free to reach out!</p>
+									
+								<ul class="actions">
+									<li><a href="landing.html" class="button next resume-button"><i class="icon fas fa-file"></i> Resume</a></li>
+								</ul>
+							</div>
+						</section>
 
 				<!-- Contact -->
 
@@ -351,14 +353,14 @@
 								</section>
 							</section>
 						</div>
-
-					<script>
-						// Contact Title 
-						var contactTitle = new ScrollMagic.Scene({triggerElement: "#contact-title-trigger"})
-							// Trigger animation by adding a css class
-							.setClassToggle("#letstalk", "in")
-							.addTo(skillsController);
-					</script>
+					</div>
+						<script>
+							// Contact Title 
+							var contactTitle = new ScrollMagic.Scene({triggerElement: "#contact-title-trigger"})
+								// Trigger animation by adding a css class
+								.setClassToggle("#letstalk", "in")
+								.addTo(skillsController);
+						</script>
 					
 					</section>
 				<!-- Footer -->
@@ -383,7 +385,7 @@
 			<script src="assets/js/particles.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/custom.js"></script>
+			<script src="assets/js/customize-particles.js"></script>
 			<script src="assets/js/contactform.js"></script>
 			<!-- Nav Scroll to Element -->
 			<script>
