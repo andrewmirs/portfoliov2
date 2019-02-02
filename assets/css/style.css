@@ -260,6 +260,14 @@ ul.icons li {
 ----- Media Queries ----- 
 -------------------------*/ 
 
+@media screen and (max-width: 480px) {
+
+	.d3 {
+		padding-left: 0;
+	}
+	
+}
+
 @media screen and (max-width: 736px) {
 
 	ul.icons li {
