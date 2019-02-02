@@ -11,7 +11,7 @@ var partJson = {
           "value": "#ffffff"
         },
         "shape": {
-          "type": "circle",
+          "type": ["circle", "edge"],
           "stroke": {
             "width": 0,
             "color": "#000000"
