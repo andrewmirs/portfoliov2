@@ -152,6 +152,10 @@ article:hover .project-header {
     transition:transform .4s ease-out;
 }
 
+.es6-short {
+	display: none;
+}
+
 /*---- About Me Section ----*/
 
 .aboutme-contact-section {
@@ -184,6 +188,10 @@ article:hover .project-header {
 	left: 0;
 }
 
+form {
+	margin: 100px 0 2em 0;
+}
+
 form > .fields > .field {
 	transition: all 225ms ease;
     color: #fff;
@@ -200,10 +208,6 @@ form > .fields > .field {
 
 .contact-btns {
 	z-index: 9999;
-}
-
-#letstalk {
-	font-size: 3rem
 }
 
 .lets {
@@ -229,15 +233,24 @@ form > .fields > .field {
 	background-repeat: no-repeat;
 }
 
-.bounce-6 {
-	animation-name: bounce-6;
-	animation-timing-function: ease;
+#letstalk {
+	font-size: 3rem;
+	display: inline-block;
+	position: absolute;
+	animation-duration: 2s;
+	animation-iteration-count: 4;
+	transform-origin: bottom;
 }
 
-@keyframes bounce-6 {
+.bounce-7 {
+	animation-name: bounce-7;
+	animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+@keyframes bounce-7 {
 	0%   { transform: scale(1,1)      translateY(0); }
 	10%  { transform: scale(1.1,.9)   translateY(0); }
-	30%  { transform: scale(.9,1.1)   translateY(-100px); }
+	30%  { transform: scale(.9,1.1)   translateY(-80px); }
 	50%  { transform: scale(1.05,.95) translateY(0); }
 	57%  { transform: scale(1,1)      translateY(-7px); }
 	64%  { transform: scale(1,1)      translateY(0); }
@@ -264,6 +277,14 @@ ul.icons li {
 
 	.d3 {
 		padding-left: 0;
+	}
+
+	.es6-short {
+		display: inline-block;
+	}
+
+	.es6-long {
+		display: none
 	}
 	
 }

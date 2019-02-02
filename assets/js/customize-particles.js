@@ -82,7 +82,7 @@ var partJson = {
         },
         "modes": {
           "grab": {
-            "distance": 24,
+            "distance": 49,
             "line_linked": {
               "opacity": 1
             }
