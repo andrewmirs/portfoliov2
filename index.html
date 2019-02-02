@@ -171,7 +171,7 @@
 
 								<div id="tech-row1" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d3">
 									<div class="icon">
-										<img src="images/skills-icons/ajax.svg">
+										<img src="images/skills-icons/ajax.png">
 									</div>
 									AJAX
 								</div>
@@ -209,7 +209,8 @@
 									<div class="icon">
 										<img src="images/skills-icons/es6.svg">
 									</div>
-									EMCAScript6
+									<span class="es6-short">ES6</span>
+									<span class="es6-long">EMCAScript6</span>
 								</div>
 								<div id="tech-row3" class="col-xs-3 col-md-3 col-sm-3 item scroll-fade-up d1">
 									<div class="icon">
@@ -278,7 +279,7 @@
 								why are we motivated to make the choices we do. This initially led me to chase a Business 
 								Marketing degree at Cal State Fullerton, focusing on product design and market strategies.</p>
 
-								<p id="contact-title-trigger">About a semester away from graduating, I was introduced to programming and couldn’t shake 
+								<p>About a semester away from graduating, I was introduced to programming and couldn’t shake 
 								the feeling that I had to figure out a way to incorporate this into my life. A few months 
 								after completing my degree, I found LearningFuze, an accelerated web development program 
 								where I’ve since spent thousands of hours on and off-campus learning, practicing and creating 
@@ -287,7 +288,7 @@
 								so feel free to reach out!</p>
 									
 								<ul class="actions">
-									<li><a href="landing.html" class="button next resume-button"><i class="icon fas fa-file"></i> Resume</a></li>
+									<li id="contact-title-trigger"><a href="landing.html" class="button next resume-button"><i class="icon fas fa-file"></i> Resume</a></li>
 								</ul>
 							</div>
 						</section>
@@ -302,7 +303,7 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<h1 id="letstalk" class="scroll-fade-right"><span class="lets">LET'S</span> <span class="talk">TALK!</span></h1>
+								<h1 id="letstalk"><span class="lets">LET'S</span> <span class="talk">TALK!</span></h1>
 								<form method="post" action="assets/server/mail_handler.php">
 									<div class="fields">
 										<div class="field half">
@@ -356,9 +357,13 @@
 					</div>
 						<script>
 							// Contact Title 
-							var contactTitle = new ScrollMagic.Scene({triggerElement: "#contact-title-trigger"})
+							var contactTitle = new ScrollMagic.Scene({
+									triggerElement: "#contact-title-trigger",
+									triggerHook: "onEnter",
+									reverse: false,
+								})
 								// Trigger animation by adding a css class
-								.setClassToggle("#letstalk", "in")
+								.setClassToggle("#letstalk", "bounce-7")
 								.addTo(skillsController);
 						</script>
 					
