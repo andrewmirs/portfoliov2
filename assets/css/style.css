@@ -188,6 +188,11 @@ article:hover .project-header {
 	left: 0;
 }
 
+/* #contact {
+	Adds a greenish tint to the bottom of the contact section
+    background: linear-gradient(rgba(43, 105, 81, 0) 0%, rgb(70, 122, 131) 176%);
+} */
+
 form {
 	margin: 100px 0 2em 0;
 }
@@ -297,9 +302,6 @@ ul.icons li {
 	}
 
 }
-
-
-
 
 /*------------------------
 ---Scrolling animations---
