@@ -65,6 +65,7 @@ a:focus {
 .project-details a {
 	text-decoration: none;
 	margin: 0 10px;
+	display: inline-block;
 }
 
 .project-details .icon.fa-github {
@@ -129,8 +130,9 @@ article:hover .project-header {
 }
 
 .skills .item {
-    text-align:center;
-    margin-bottom:30px;
+    text-align: center;
+	margin-bottom: 30px;
+	width: 24.5%;
 }
 
 .skills .item .icon{
