@@ -42,7 +42,7 @@ function sendMessage(){
         return
     }
 
-    $('#send-message').text('Sending Message');
+    $('#send-message').val('Sending Message');
     $('.contact-btns').attr('disabled', 'disabled');
 
     let name = $('#name').val();
@@ -59,12 +59,12 @@ function sendMessage(){
         },
         success: function(result){
             clearForm();
-            $('#send-message').text('Send Message');
+            $('#send-message').val('Send Message');
             $('.contact-btns').removeAttr('disabled');
         },
         error: function(error){
             alert('Error attempting to send message.');
-            $('#send-message').text('Send Message');
+            $('#send-message').val('Send Message');
             $('.contact-btns').removeAttr('disabled');
         }
     });
