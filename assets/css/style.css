@@ -233,6 +233,14 @@ form > .fields > .field {
     color: #dd7a7a;
 }
 
+#email-link {
+	text-decoration: none;
+}
+
+#email-link:hover {
+	text-decoration: underline;
+}
+
 #send-message:hover {
 	background-image: url('../../images/ocean-watercolor.jpg');
 	background-size: cover;

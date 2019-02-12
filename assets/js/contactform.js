@@ -23,8 +23,8 @@ function sendMessage(){
         {
             field: '#message',
             err: '.error-message',
-            regex: /^[A-Za-z.,;:@!? ]{2,}$/,
-            message: 'Needs to be at least 2 characters. Letters and punctuation characters only.'
+            regex: /^.{2,}$/,
+            message: 'Needs to be at least 2 characters.'
         }
     ]
 
@@ -42,6 +42,9 @@ function sendMessage(){
         return
     }
 
+    $('#send-message').text('Sending Message');
+    $('.contact-btns').attr('disabled', 'disabled');
+
     let name = $('#name').val();
     let email = $('#email').val();
     let message = $('#message').val();
@@ -56,9 +59,13 @@ function sendMessage(){
         },
         success: function(result){
             clearForm();
+            $('#send-message').text('Send Message');
+            $('.contact-btns').removeAttr('disabled');
         },
         error: function(error){
-            alert('Error attempting to send message.')
+            alert('Error attempting to send message.');
+            $('#send-message').text('Send Message');
+            $('.contact-btns').removeAttr('disabled');
         }
     });
 
