@@ -42,8 +42,7 @@ function sendMessage(){
         return
     }
 
-    $('#send-message').val('Sending Message');
-    $('.contact-btns').attr('disabled', 'disabled');
+    disableButtons();
 
     let name = $('#name').val();
     let email = $('#email').val();
@@ -59,13 +58,11 @@ function sendMessage(){
         },
         success: function(result){
             clearForm();
-            $('#send-message').val('Send Message');
-            $('.contact-btns').removeAttr('disabled');
+            enableButtons();
         },
         error: function(error){
             alert('Error attempting to send message.');
-            $('#send-message').val('Send Message');
-            $('.contact-btns').removeAttr('disabled');
+            enableButtons();
         }
     });
 
@@ -85,4 +82,16 @@ function clearForm(){
     $('#name').val('');
     $('#email').val('');
     $('#message').val('');
+}
+
+function disableButtons(){
+    $('#send-message').val('Sending Message');
+    $('#send-message').attr('disabled','disabled');
+    $('#clear-form').attr('disabled','disabled');
+}
+
+function enableButtons(){
+    $('#send-message').val('Send Message');
+    $('#send-message').removeAttr('disabled');
+    $('#clear-form').removeAttr('disabled');
 }
