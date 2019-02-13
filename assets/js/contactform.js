@@ -12,19 +12,19 @@ function sendMessage(){
             field: '#name',
             err: '.error-name',
             regex: /^[A-Za-z ]{2,25}$/,
-            message: 'Needs to be at least 2 characters. Letters only.'
+            message: 'Must be at least 2 characters. Letters only.'
         },
         {
             field: '#email',
             err: '.error-email',
             regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-            message: 'Needs to be proper email format. Example: test@mail.com'
+            message: 'Must be proper email format. Example: test@mail.com'
         },
         {
             field: '#message',
             err: '.error-message',
             regex: /^.{2,}$/,
-            message: 'Needs to be at least 2 characters.'
+            message: 'Must be at least 2 characters.'
         }
     ]
 
